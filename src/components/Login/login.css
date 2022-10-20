@@ -1,0 +1,108 @@
+.loginPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginFormTitle {
+    font-size: 20px;
+    letter-spacing: 1.67px;
+    line-height: 27px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 36px;
+    margin-top: 33px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 19px;
+}
+
+.input {
+    height: 4em;
+    width: 24em;
+    border: none;
+    outline: none;
+    border-radius: 0.4em;
+    padding: 15px 22px;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+.input::-webkit-input-placeholder {
+    color: var(--placeHolderTextClr);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+.input:-ms-input-placeholder {
+    color: var(--placeHolderTextClr);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+.input::placeholder {
+    color: var(--placeHolderTextClr);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+.forgotPassword {
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 19px;
+    text-align: right;
+}
+
+.signInButton button {
+    background-color: var(--fontClr);
+    border: none;
+    outline: none;
+    margin: 41px 0 58px 0;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    line-height: 24px;
+    color: var(--blueClr);
+    padding: 10px 28px;
+    border-radius: 0.4em;
+}
+
+.signUpLink {
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 19px;
+    text-align: center;
+    width: auto;
+}
+
+.signUpLink div {
+    width: 27.5em;
+    text-align: left;
+}
+
+.loginPW {
+    position: relative;
+}
+
+.eyeIcon {
+    position: absolute;
+    top: 22px;
+    right: 14px;
+    cursor: pointer;
+}
+
+.signUpLink a {
+    color: var(--fontClr);
+    text-decoration: none;
+    cursor: pointer;
+}

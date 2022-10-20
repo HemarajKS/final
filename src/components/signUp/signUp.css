@@ -1,0 +1,21 @@
+.signUpFormTitle {
+    font-size: 20px;
+    letter-spacing: 1.67px;
+    line-height: 27px;
+    float: left;
+    width: 18.5em;
+    padding: 60px 0 32px 0;
+}
+
+.signUnButton button {
+    background-color: var(--fontClr);
+    border: none;
+    outline: none;
+    margin: 17px 0 67px 0;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    line-height: 24px;
+    color: var(--blueClr);
+    padding: 10px 28px;
+    border-radius: 0.4em;
+}

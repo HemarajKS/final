@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Open Sans';
+    transition: all 0.5s ease;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #fafafa;
+}
+
+:root {
+    --background: linear-gradient(180deg, #20bbff 0%, #0e85ff 100%);
+    --borderClr: #f5f7fb4f;
+    --fontClr: #ffffff;
+    --placeHolderTextClr: #787e8c;
+    --blueClr: #0e85ff;
+    --successGreen: #cbf3dc;
+    --successGreenBorder: #97e6b8;
+    --successGreenFont: #2ecc71;
+    --sideBarBlue: #2892ff;
+    --mainMargin: 0 12%;
+    --activeOrange: #ffa043;
+    --backgroundClr: #f5f7fb;
+    --blackFont: #3c4857;
+}
+
+input[type='password']::-ms-reveal,
+input[type='password']::-ms-clear {
+    display: none;
+}

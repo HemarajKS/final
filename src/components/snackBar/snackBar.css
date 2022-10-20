@@ -1,0 +1,29 @@
+.snackBar {
+  position: absolute;
+  top: 3.5em;
+  background-color: var(--successGreen);
+  border: 1px solid var(--successGreenBorder);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10em;
+  padding: 12px 23px;
+}
+
+.snackBarMsg {
+  color: var(--successGreenFont);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 17px;
+  font-weight: bold;
+}
+
+.snackBarClose {
+  color: var(--successGreenFont);
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 17px;
+  font-weight: 900;
+  cursor: pointer;
+}
