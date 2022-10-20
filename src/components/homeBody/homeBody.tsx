@@ -123,7 +123,13 @@ const HomeBody = () => {
 
                       <div className="cardCopyTitle">
                         <div className="cardTitle"> {ele.siteName}</div>
-                        <div className="cardCopy">
+                        <div
+                          className="cardCopy"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            navigator.clipboard.writeText(ele.sitePassword);
+                          }}
+                        >
                           <img
                             src={require('../../assets/icons/copy.png')}
                             alt="copy"

@@ -2,8 +2,10 @@ import HomeBody from '../../components/homeBody/homeBody';
 import SideBar from '../../components/sideBar/sideBar';
 import TopBar from '../../components/topBar/topBar';
 import './home.css';
+import { useState } from 'react';
 
 const Home = () => {
+  const [profileShow, setProfileShow] = useState(false);
   return (
     <div className="home">
       <div className="homeContainer">
@@ -37,7 +39,37 @@ const Home = () => {
             <img
               src={require('../../assets/icons/profile (2).png')}
               alt="profile"
+              onClick={() => {
+                setProfileShow(!profileShow);
+              }}
             />
+            {profileShow ? (
+              <div className="profileContents">
+                <div className="changePassword changePasswordMarginBottom">
+                  <div className="changePwText">Change Password</div>
+                  <img
+                    src={require('../../assets/icons/ic_pass.png')}
+                    alt="change Password"
+                  />
+                </div>
+                <div
+                  className="changePassword"
+                  onClick={() => {
+                    localStorage.removeItem('auth');
+                    localStorage.removeItem('currentUser');
+                    window.location.reload();
+                  }}
+                >
+                  <div className="changePwText">Sign Out</div>
+                  <img
+                    src={require('../../assets/icons/712391-200.png')}
+                    alt="sign out"
+                  />
+                </div>
+              </div>
+            ) : (
+              ''
+            )}
           </div>
         </div>
         <div className="homeBody">
