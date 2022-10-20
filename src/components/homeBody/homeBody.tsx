@@ -8,6 +8,7 @@ const HomeBody = () => {
   const [element, setElement] = useState({});
   const [Index, setIndex] = useState(0);
   const [search, setSearch] = useState('');
+  const [category, setCategory] = useState('Social Media');
 
   const data: any = [
     {
@@ -31,7 +32,17 @@ const HomeBody = () => {
     localStorage.getItem(currentUser) || '[]'
   );
 
-  const filteredData = previousData.filter((ele: any) =>
+  const Category = (e: any) => {
+    setCategory(e.target.value);
+  };
+
+  const categoryData = previousData.filter((ele: any) =>
+    ele.sector.toLowerCase().includes(category.toLowerCase())
+  );
+
+  console.log('category', categoryData);
+
+  const filteredData = categoryData.filter((ele: any) =>
     ele.siteName.toLowerCase().includes(search.toLowerCase())
   );
   console.log(filteredData);
@@ -41,8 +52,7 @@ const HomeBody = () => {
       <div className="homeBodyHeader">
         <div className="headerBodyTitle">Sites</div>
         <div className="homeBodyCount mobileHomeBodyCount">
-          <div className="socialMedia">Social Media</div>
-          <div className="socialMediaCount">{previousData.length}</div>
+          <div className="socialMediaCount">{categoryData.length}</div>
           <div className="socialMediaDropDown">
             <img src={require('../../assets/icons/Path Copy.png')} alt="add" />
           </div>
@@ -76,8 +86,15 @@ const HomeBody = () => {
         </div>
       </div>
       <div className="homeBodyCount">
-        <div className="socialMedia">Social Media</div>
-        <div className="socialMediaCount">{previousData.length}</div>
+        <div className="socialMedia">
+          <select className="socialMedia" onChange={Category}>
+            <option value="Social Media">Social Media</option>
+            <option value="Finance">Finance</option>
+            <option value="Business">Business</option>
+          </select>
+        </div>
+
+        <div className="socialMediaCount">{categoryData.length}</div>
         <div className="socialMediaDropDown">
           <img src={require('../../assets/icons/Path Copy.png')} alt="add" />
         </div>

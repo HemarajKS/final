@@ -130,13 +130,17 @@ const Modal = (props: any) => {
           <div className="modalInput">
             <div>Sector/Folder</div>
 
-            <input
-              type="text"
+            <select
               name="sector"
               className="modalInputBar"
               onChange={onChangeHandler}
               value={edit ? value.sector : currentItem && currentItem.sector}
-            />
+            >
+              {' '}
+              <option value="Social Media">Social Media</option>
+              <option value="Finance">Finance</option>
+              <option value="Business">Business</option>
+            </select>
           </div>
           <div className="modalInput">
             <div>User Name</div>
