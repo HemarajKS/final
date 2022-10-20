@@ -1,37 +1,41 @@
 .sideBar {
-  position: fixed;
-  background-color: var(--sideBarBlue);
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 8rem;
-  z-index: 2;
+    position: fixed;
+    background-color: var(--sideBarBlue);
+    top: 0;
+    left: 12%;
+    bottom: 0;
+    width: 8rem;
+    z-index: 2;
 }
 
 .sideBarContents {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 104px;
-  padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 104px;
+    padding-top: 40px;
 }
 
 .homeIcon {
-  width: 100%;
-  border-left: 4px solid var(--activeOrange);
-  border-radius: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 18px 0;
-  position: relative;
+    width: 100%;
+    border-left: 4px solid var(--activeOrange);
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 0;
+    position: relative;
 }
 
 .homeSelected {
-  position: absolute;
-  height: 15px;
-  width: 15px;
-  background-color: var(--activeOrange);
-  border-radius: 50%;
-  right: -8px;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: var(--activeOrange);
+    border-radius: 50%;
+    right: -8px;
+}
+
+@media screen and (max-width: 777px) {
+  .sideBar{left:0}
 }
