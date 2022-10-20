@@ -232,6 +232,9 @@
     .cardContainer {
         justify-content: center;
     }
+    .homeBodyEmpty {
+        width: 85%;
+    }
 }
 
 @media screen and (max-width: 582px) {
