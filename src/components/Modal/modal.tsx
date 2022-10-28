@@ -98,16 +98,15 @@ const Modal = (props: any) => {
       newData.sitePassword !== '' &&
       newData.sector !== ''
     ) {
-      let repeat: any[] = [];
-      previousData.map((ele: any) => {
-        if (newData.siteName === ele.siteName) {
-          repeat.push('repeat');
-        }
-      });
-
-      console.log('repeate', repeat.includes('repeat'));
-
       if (props.props === 'Add Site') {
+        let repeat: any[] = [];
+        previousData.map((ele: any) => {
+          if (newData.siteName === ele.siteName) {
+            repeat.push('repeat');
+          }
+        });
+
+        console.log('repeate', repeat.includes('repeat'));
         if (repeat.includes('repeat')) {
           alert(
             'Data already exists for this site name please edit to modify it...'
@@ -122,12 +121,23 @@ const Modal = (props: any) => {
           alert('data added successfully');
         }
       } else if (props.props === 'Site Details') {
-        previousData[props.element] = newData;
+        let repeated: any[] = [];
+        previousData.map((ele: any) => {
+          if (newData.siteName === ele.siteName) {
+            repeated.push('repeat');
+          }
+        });
+        if (repeated.includes('repeat')) {
+          alert('Site Name already exist please enter different site name...');
+        } else {
+          previousData[props.element] = newData;
 
-        localStorage.setItem(
-          JSON.stringify(currentUser),
-          JSON.stringify(previousData)
-        );
+          localStorage.setItem(
+            JSON.stringify(currentUser),
+            JSON.stringify(previousData)
+          );
+          alert('edit successful');
+        }
       }
     } else {
       alert('Please enter all the required fields');
