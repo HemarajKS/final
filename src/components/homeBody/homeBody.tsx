@@ -2,7 +2,7 @@ import Modal from '../Modal/modal'
 import './homeBody.css'
 import { useState } from 'react'
 
-const HomeBody = () => {
+const HomeBody = (props: any) => {
   const [toggle, setToggle] = useState(false)
   const [modal, setModal] = useState('')
   const [element, setElement] = useState({})
@@ -10,17 +10,7 @@ const HomeBody = () => {
   const [search, setSearch] = useState('')
   const [category, setCategory] = useState('Social Media')
 
-  const data: any = [
-    {
-      siteName: 'Linkdin',
-      url: 'www.linkdin.com',
-      sector: 'Social Media',
-      userName: 'ssmraok',
-      sitePassword: 'abcd123',
-      notes: '',
-      icon: require(`../../assets/icons/LinkdIn.png`),
-    },
-  ]
+  console.log('serachhh', props.clickSearch)
 
   const currentUser = JSON.stringify(localStorage.getItem('currentUser') || '')
 
@@ -80,6 +70,26 @@ const HomeBody = () => {
               className="searchbarIcn"
             />
           </div>
+
+          {props.clickSearch ? (
+            <div className="headerSearchMobile">
+              <input
+                type="text"
+                className="searchbar"
+                placeholder="Search"
+                onChange={(e: any) => {
+                  setSearch(e.target.value)
+                }}
+              />
+              <img
+                src={require('../../assets/icons/search.png')}
+                alt="search"
+                className="searchbarIcn"
+              />
+            </div>
+          ) : (
+            ''
+          )}
           <div
             className="headerAddButton"
             onClick={() => {
