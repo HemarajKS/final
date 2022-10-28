@@ -28,12 +28,12 @@ const Modal = (props: any) => {
   const currentItem = previousData[props.element]
   useEffect(() => {
     setValue({
-      siteName: currentItem ? currentItem.siteName : '',
-      url: currentItem ? currentItem.url : '',
-      sector: currentItem ? currentItem.sector : '',
-      userName: currentItem ? currentItem.userName : '',
-      sitePassword: currentItem ? currentItem.sitePassword : '',
-      notes: currentItem ? currentItem.notes : '',
+      siteName: edit ? (currentItem ? currentItem.siteName : '') : '',
+      url: edit ? (currentItem ? currentItem.url : '') : '',
+      sector: edit ? (currentItem ? currentItem.sector : '') : '',
+      userName: edit ? (currentItem ? currentItem.userName : '') : '',
+      sitePassword: edit ? (currentItem ? currentItem.sitePassword : '') : '',
+      notes: edit ? (currentItem ? currentItem.notes : '') : '',
     })
   }, [])
 
