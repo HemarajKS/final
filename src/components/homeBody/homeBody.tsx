@@ -118,7 +118,7 @@ const HomeBody = (props: any) => {
       </div>
       <div className="homeBodyContainerBox">
         <div className="homeBodyContents">
-          {JSON.stringify(previousData) === '[]' ? (
+          {JSON.stringify(categoryData) === '[]' ? (
             <div className="homeBodyEmpty">
               <div>Please Click on the “+” symbol to add sites</div>
             </div>
