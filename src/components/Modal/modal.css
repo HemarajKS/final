@@ -15,7 +15,7 @@
     border-radius: 4px;
     background-color: #f5f7fb;
     height: 36px;
-    padding: 10px;
+    padding: 2px 10px;
     width: 100%;
 }
 
@@ -234,4 +234,14 @@
     .modalButtons {
         width: 82%;
     }
+}
+
+@media screen and (max-width: 582px) {
+    .modalInputBar {
+        width: 84vw;
+    }
+}
+
+.modalInput {
+    width: 90%;
 }
