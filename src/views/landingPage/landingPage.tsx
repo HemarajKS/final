@@ -1,28 +1,29 @@
-import Login from '../../components/Login/login'
-import SignUp from '../../components/signUp/signUp'
-import './landingPage.css'
-import { Routes, Route, Link } from 'react-router-dom'
-import SnackBar from '../../components/snackBar/snackBar'
-import { useEffect, useState } from 'react'
+import Login from '../../components/Login/login';
+import SignUp from '../../components/signUp/signUp';
+import './landingPage.css';
+import { Routes, Route, Link } from 'react-router-dom';
+import SnackBar from '../../components/snackBar/snackBar';
+import { useEffect, useState } from 'react';
 
 const LandingPage = (child: any) => {
-  const [displaySnackBar, setDisplaySnackBar] = useState(false)
-  const [path, setPath] = useState('')
+  const [displaySnackBar, setDisplaySnackBar] = useState(false);
+  const [path, setPath] = useState(
+    window.location.pathname === '/landing/login' ? 'login' : 'signup'
+  );
 
   useEffect(() => {
-    setDisplaySnackBar(Boolean(sessionStorage.getItem('signUpSuccess')))
-    sessionStorage.removeItem('signUpSuccess')
-  }, [])
+    setDisplaySnackBar(Boolean(sessionStorage.getItem('signUpSuccess')));
+    sessionStorage.removeItem('signUpSuccess');
+  }, []);
 
   setInterval(() => {
-    setDisplaySnackBar(false)
-  }, 2000)
+    setDisplaySnackBar(false);
+  }, 2000);
 
-  console.log('current', path)
-
+  console.log('current', path);
   useEffect(() => {
-    setPath(window.location.pathname)
-  })
+    console.log(window.location.pathname);
+  });
 
   return (
     <div className="login">
@@ -51,17 +52,19 @@ const LandingPage = (child: any) => {
           </div>
           <div className="signInsignUpTab">
             <Link
-              className={
-                path === '/landing/login' ? 'signInsignUpTabunderline' : ''
-              }
+              className={path === 'login' ? 'signInsignUpTabunderline' : ''}
               to="/landing/login"
+              onClick={() => {
+                setPath('login');
+              }}
             >
               SIGN IN
             </Link>
             <Link
-              className={
-                path === '/landing/signUp' ? 'signInsignUpTabunderline' : ''
-              }
+              className={path === 'signup' ? 'signInsignUpTabunderline' : ''}
+              onClick={() => {
+                setPath('signup');
+              }}
               to="/landing/signUp"
             >
               SIGN UP
@@ -77,7 +80,7 @@ const LandingPage = (child: any) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;
