@@ -215,7 +215,22 @@ const Modal = (props: any) => {
           <div></div>
           {props.props === 'Add Site' ? (
             <div className="modalButtons">
-              <button className="modalButton modalResetButton">Reset</button>
+              <button
+                className="modalButton modalResetButton"
+                type="button"
+                onClick={() => {
+                  setValue({
+                    siteName: '',
+                    url: '',
+                    sector: '',
+                    userName: '',
+                    sitePassword: '',
+                    notes: '',
+                  })
+                }}
+              >
+                Reset
+              </button>
               <button className="modalButton modalSaveButton" type="submit">
                 Save
               </button>
