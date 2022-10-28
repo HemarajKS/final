@@ -12,6 +12,9 @@
 }
 
 @media screen and (max-width: 582px) {
+  .homeBodyCount {
+    z-index: 1;
+  }
   .homeTopBar {
     display: none;
   }
@@ -22,6 +25,7 @@
     padding: 0 18px;
     top: 0;
     left: 0;
+    z-index: 2;
     right: 0;
     justify-content: space-between;
     align-items: center;
@@ -63,5 +67,15 @@
   .profileContents {
     top: 79px;
     right: 0px;
+  }
+
+  .homeBodyTop {
+    position: fixed;
+    width: 5em;
+    height: 79px;
+    background-color: #fafafa;
+    /* margin-top: 60px; */
+    width: 100%;
+    z-index: 1;
   }
 }

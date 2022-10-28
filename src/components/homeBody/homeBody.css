@@ -240,6 +240,10 @@
   .cardContents {
     width: 312px;
   }
+
+  .cardLink {
+    width: 312px;
+  }
   .cardContainer {
     justify-content: center;
   }
@@ -278,6 +282,10 @@
   .homeBodyContents {
     padding-top: 94px;
   }
+
+  .searchbar {
+    margin-top: 100px;
+  }
   .closeBtn {
     position: fixed;
     top: 8px;
@@ -304,10 +312,16 @@
   .homeBodyContents {
     padding-top: 0px;
   }
+  .searchbar {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 420px) {
   .cardContents {
+    width: 270px;
+  }
+  .cardLink {
     width: 270px;
   }
 }

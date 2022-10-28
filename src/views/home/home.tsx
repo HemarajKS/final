@@ -1,12 +1,12 @@
-import HomeBody from '../../components/homeBody/homeBody'
-import SideBar from '../../components/sideBar/sideBar'
-import TopBar from '../../components/topBar/topBar'
-import './home.css'
-import { useState } from 'react'
+import HomeBody from '../../components/homeBody/homeBody';
+import SideBar from '../../components/sideBar/sideBar';
+import TopBar from '../../components/topBar/topBar';
+import './home.css';
+import { useState } from 'react';
 
 const Home = () => {
-  const [profileShow, setProfileShow] = useState(false)
-  const [clickSearch, setClickSearch] = useState(false)
+  const [profileShow, setProfileShow] = useState(false);
+  const [clickSearch, setClickSearch] = useState(false);
   return (
     <div className="home">
       <div className="homeContainer">
@@ -33,7 +33,7 @@ const Home = () => {
               alt="search"
               id="searchIcon"
               onClick={() => {
-                setClickSearch(!clickSearch)
+                setClickSearch(!clickSearch);
               }}
             />
             <img src={require('../../assets/icons/sync_icn.png')} alt="sync" />
@@ -41,7 +41,7 @@ const Home = () => {
               src={require('../../assets/icons/profile (2).png')}
               alt="profile"
               onClick={() => {
-                setProfileShow(!profileShow)
+                setProfileShow(!profileShow);
               }}
             />
             {profileShow ? (
@@ -56,9 +56,9 @@ const Home = () => {
                 <div
                   className="changePassword"
                   onClick={() => {
-                    localStorage.removeItem('auth')
-                    localStorage.removeItem('currentUser')
-                    window.location.reload()
+                    localStorage.removeItem('auth');
+                    localStorage.removeItem('currentUser');
+                    window.location.reload();
                   }}
                 >
                   <div className="changePwText">Sign Out</div>
@@ -74,11 +74,12 @@ const Home = () => {
           </div>
         </div>
         <div className="homeBody">
+          <div className="homeBodyTop"></div>
           <HomeBody clickSearch={clickSearch} />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
