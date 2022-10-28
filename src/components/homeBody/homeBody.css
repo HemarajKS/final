@@ -94,6 +94,7 @@
   outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  cursor: pointer;
   -ms-appearance: none;
 }
 
@@ -154,6 +155,7 @@
   background-color: #ffffff;
   border-radius: 1em;
   padding: 12px 20px;
+  cursor: pointer;
 }
 
 .cardUpper {
@@ -168,6 +170,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 6px;
+  cursor: copy;
 }
 
 .cardTitle {
