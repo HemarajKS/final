@@ -1,6 +1,6 @@
 .home {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   overflow: auto;
   border: 1px solid rgba(255, 0, 0, 0);
 }

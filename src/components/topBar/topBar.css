@@ -1,6 +1,6 @@
 .topBar {
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   margin-left: 8rem;
   top: 0;
   right: 12%;

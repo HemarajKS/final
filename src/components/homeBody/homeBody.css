@@ -5,7 +5,10 @@
   min-height: 100vh;
   overflow: auto;
 }
-
+.homeBodyContainerBox {
+  height: auto;
+  overflow: auto;
+}
 .homeBodyContainer {
   padding: 3em 5em;
   display: flex;
